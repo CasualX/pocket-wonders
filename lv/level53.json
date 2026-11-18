@@ -1,0 +1,286 @@
+{
+  "name": "Overstaffed",
+  "author": "Codex",
+  "hint": "One hire. Some chips still have jobs.\nLeave the desks that steer your helper.",
+  "required_chips": 6,
+  "time_limit": 0,
+  "map": {
+    "width": 11,
+    "height": 12,
+    "legend": [
+      "BearTrap",
+      "RedButton",
+      "Wall",
+      "Gravel",
+      "Hint",
+      "CloneMachine",
+      "Floor",
+      "BrownButton",
+      "Exit"
+    ],
+    "data": [
+      0,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      3,
+      4,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      2,
+      5,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      3,
+      2,
+      2,
+      3,
+      6,
+      2,
+      2,
+      2,
+      6,
+      2,
+      6,
+      3,
+      2,
+      2,
+      3,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      3,
+      2,
+      2,
+      3,
+      6,
+      2,
+      6,
+      2,
+      6,
+      2,
+      6,
+      3,
+      2,
+      2,
+      3,
+      6,
+      6,
+      7,
+      2,
+      7,
+      6,
+      6,
+      3,
+      2,
+      2,
+      3,
+      6,
+      2,
+      6,
+      2,
+      6,
+      2,
+      6,
+      3,
+      2,
+      2,
+      3,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      3,
+      2,
+      2,
+      7,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      6,
+      6,
+      0,
+      6,
+      6,
+      6,
+      0,
+      6,
+      8,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ]
+  },
+  "entities": [
+    {
+      "kind": "Player",
+      "pos": [
+        2,
+        1
+      ]
+    },
+    {
+      "kind": "Block",
+      "pos": [
+        0,
+        0
+      ],
+      "face_dir": "Right"
+    },
+    {
+      "kind": "Chip",
+      "pos": [
+        7,
+        8
+      ]
+    },
+    {
+      "kind": "Chip",
+      "pos": [
+        5,
+        4
+      ]
+    },
+    {
+      "kind": "Chip",
+      "pos": [
+        5,
+        2
+      ]
+    },
+    {
+      "kind": "Chip",
+      "pos": [
+        7,
+        6
+      ]
+    },
+    {
+      "kind": "Chip",
+      "pos": [
+        3,
+        8
+      ]
+    },
+    {
+      "kind": "Chip",
+      "pos": [
+        2,
+        5
+      ]
+    },
+    {
+      "kind": "Chip",
+      "pos": [
+        8,
+        3
+      ]
+    },
+    {
+      "kind": "Chip",
+      "pos": [
+        6,
+        3
+      ]
+    },
+    {
+      "kind": "Socket",
+      "pos": [
+        8,
+        10
+      ]
+    },
+    {
+      "kind": "Paramecium",
+      "pos": [
+        0,
+        2
+      ],
+      "face_dir": "Right"
+    }
+  ],
+  "connections": [
+    {
+      "src": [
+        1,
+        0
+      ],
+      "dest": [
+        0,
+        2
+      ]
+    },
+    {
+      "src": [
+        4,
+        6
+      ],
+      "dest": [
+        3,
+        10
+      ]
+    },
+    {
+      "src": [
+        6,
+        6
+      ],
+      "dest": [
+        7,
+        10
+      ]
+    },
+    {
+      "src": [
+        1,
+        9
+      ],
+      "dest": [
+        0,
+        0
+      ]
+    }
+  ]
+}

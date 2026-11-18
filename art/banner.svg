@@ -1,0 +1,231 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="960" height="360" viewBox="0 0 320 120" shape-rendering="crispEdges" role="img" aria-labelledby="title description">
+  <title id="title">Pocket Wonders</title>
+  <desc id="description">Vector pixel art: a bespectacled explorer, keys, microchips, flippers, ice, and force-floor arrows around a two-line title. Sixteen colors on a 320 by 120 grid.</desc>
+  <style>
+    .ink { fill: #091323; }
+    .navy { fill: #10213b; }
+    .metal-dark { fill: #3e506a; }
+    .metal { fill: #7f94aa; }
+    .metal-light { fill: #bbcad1; }
+    .cream { fill: #fff0c2; }
+    .gold { fill: #f5bf3b; }
+    .brown { fill: #995130; }
+    .skin { fill: #edb17d; }
+    .teal-dark { fill: #12665d; }
+    .teal { fill: #2fcfa5; }
+    .mint { fill: #a5efd2; }
+    .blue { fill: #1384aa; }
+    .cyan { fill: #45c9e3; }
+    .ice { fill: #c5f5ff; }
+    .red { fill: #e54e43; }
+    .circuit { fill: none; stroke: #2fcfa5; stroke-width: 2; stroke-linecap: butt; stroke-linejoin: miter; }
+    /* At the lettering's 4x scale, a half-unit stroke adds one whole pixel per edge. */
+    #pocket { stroke: #fff0c2; stroke-width: .5; stroke-linejoin: miter; }
+    #wonders { stroke: #f5bf3b; stroke-width: .5; stroke-linejoin: miter; }
+    #pocket-shadow, #wonders-shadow { stroke: #091323; stroke-width: .5; stroke-linejoin: miter; }
+  </style>
+
+  <defs>
+    <!-- Original 5x7 lettering; W uses seven columns. No font dependency. -->
+    <path id="letter-p" d="M0 0h4v1H0Z M0 1h1v1H0Z M4 1h1v1H4Z M0 2h1v1H0Z M4 2h1v1H4Z M0 3h4v1H0Z M0 4h1v1H0Z M0 5h1v1H0Z M0 6h1v1H0Z"/>
+    <path id="letter-o" d="M1 0h3v1H1Z M0 1h1v1H0Z M4 1h1v1H4Z M0 2h1v1H0Z M4 2h1v1H4Z M0 3h1v1H0Z M4 3h1v1H4Z M0 4h1v1H0Z M4 4h1v1H4Z M0 5h1v1H0Z M4 5h1v1H4Z M1 6h3v1H1Z"/>
+    <path id="letter-c" d="M1 0h4v1H1Z M0 1h1v1H0Z M0 2h1v1H0Z M0 3h1v1H0Z M0 4h1v1H0Z M0 5h1v1H0Z M1 6h4v1H1Z"/>
+    <path id="letter-k" d="M0 0h1v1H0Z M4 0h1v1H4Z M0 1h1v1H0Z M3 1h1v1H3Z M0 2h1v1H0Z M2 2h1v1H2Z M0 3h2v1H0Z M0 4h1v1H0Z M2 4h1v1H2Z M0 5h1v1H0Z M3 5h1v1H3Z M0 6h1v1H0Z M4 6h1v1H4Z"/>
+    <path id="letter-e" d="M0 0h5v1H0Z M0 1h1v1H0Z M0 2h1v1H0Z M0 3h4v1H0Z M0 4h1v1H0Z M0 5h1v1H0Z M0 6h5v1H0Z"/>
+    <path id="letter-t" d="M0 0h5v1H0Z M2 1h1v1H2Z M2 2h1v1H2Z M2 3h1v1H2Z M2 4h1v1H2Z M2 5h1v1H2Z M2 6h1v1H2Z"/>
+    <path id="letter-w" d="M0 0h1v1H0Z M6 0h1v1H6Z M0 1h1v1H0Z M6 1h1v1H6Z M0 2h1v1H0Z M6 2h1v1H6Z M0 3h1v1H0Z M3 3h1v1H3Z M6 3h1v1H6Z M0 4h1v1H0Z M3 4h1v1H3Z M6 4h1v1H6Z M0 5h1v1H0Z M2 5h1v1H2Z M4 5h1v1H4Z M6 5h1v1H6Z M1 6h1v1H1Z M5 6h1v1H5Z"/>
+    <path id="letter-n" d="M0 0h1v1H0Z M4 0h1v1H4Z M0 1h2v1H0Z M4 1h1v1H4Z M0 2h2v1H0Z M4 2h1v1H4Z M0 3h1v1H0Z M2 3h1v1H2Z M4 3h1v1H4Z M0 4h1v1H0Z M3 4h2v1H3Z M0 5h1v1H0Z M3 5h2v1H3Z M0 6h1v1H0Z M4 6h1v1H4Z"/>
+    <path id="letter-d" d="M0 0h4v1H0Z M0 1h1v1H0Z M4 1h1v1H4Z M0 2h1v1H0Z M4 2h1v1H4Z M0 3h1v1H0Z M4 3h1v1H4Z M0 4h1v1H0Z M4 4h1v1H4Z M0 5h1v1H0Z M4 5h1v1H4Z M0 6h4v1H0Z"/>
+    <path id="letter-r" d="M0 0h4v1H0Z M0 1h1v1H0Z M4 1h1v1H4Z M0 2h1v1H0Z M4 2h1v1H4Z M0 3h4v1H0Z M0 4h1v1H0Z M2 4h1v1H2Z M0 5h1v1H0Z M3 5h1v1H3Z M0 6h1v1H0Z M4 6h1v1H4Z"/>
+    <path id="letter-s" d="M1 0h4v1H1Z M0 1h1v1H0Z M0 2h1v1H0Z M1 3h3v1H1Z M4 4h1v1H4Z M4 5h1v1H4Z M0 6h4v1H0Z"/>
+
+    <g id="corner-circuit">
+      <path class="circuit" d="M0 26H10V18H17V10H26 M0 33H15V26H26V20H45V14"/>
+      <path class="teal" d="M25 6H33V14H25Z M41 10H49V18H41Z"/>
+      <path class="navy" d="M27 8H31V12H27Z M43 12H47V16H43Z"/>
+    </g>
+
+    <g id="sparkle" class="cream">
+      <path d="M2 0H4V2H6V4H4V6H2V4H0V2H2Z"/>
+    </g>
+
+    <g id="microchip">
+      <path class="cream" d="M4 0H6V3H4Z M9 0H11V3H9Z M14 0H16V3H14Z M4 17H6V20H4Z M9 17H11V20H9Z M14 17H16V20H14Z M0 4H3V6H0Z M0 9H3V11H0Z M0 14H3V16H0Z M17 4H20V6H17Z M17 9H20V11H17Z M17 14H20V16H17Z"/>
+      <rect x="3" y="3" width="14" height="14" class="ink"/>
+      <rect x="4" y="4" width="12" height="12" class="metal"/>
+      <path class="metal-light" d="M4 4H16V6H6V16H4Z"/>
+      <path class="metal-dark" d="M15 6H16V16H6V15H15Z"/>
+      <rect x="7" y="7" width="7" height="7" class="ink"/>
+      <rect x="8" y="8" width="5" height="5" class="teal"/>
+      <rect x="8" y="8" width="5" height="1" class="mint"/>
+    </g>
+
+    <!-- Fill is inherited so the same clean key silhouette can be red or gold. -->
+    <g id="key">
+      <path class="ink" d="M0 4H19V1H22V0H30V1H32V11H30V13H22V11H19V10H14V14H9V10H7V13H2V10H0Z"/>
+      <path d="M1 5H20V2H23V1H29V2H31V10H29V12H23V10H20V9H13V13H10V9H6V12H3V9H1Z"/>
+      <rect x="24" y="4" width="4" height="5" class="ink"/>
+    </g>
+
+    <g id="flipper">
+      <path class="ink" d="M4 0H9V6H11V8H12V15H10V18H3V16H1V13H0V9H4Z"/>
+      <path class="teal" d="M5 2H8V8H10V10H11V14H9V16H4V14H3V12H2V10H5Z"/>
+      <rect x="5" y="3" width="3" height="4" class="teal-dark"/>
+      <path class="mint" d="M5 10H6V14H5Z M8 10H9V14H8Z"/>
+    </g>
+
+    <g id="toggle-block">
+      <rect width="17" height="17" class="ink"/>
+      <rect x="1" y="1" width="15" height="15" class="teal-dark"/>
+      <rect x="2" y="2" width="13" height="11" class="teal"/>
+      <path class="mint" d="M2 2H15V4H4V13H2Z"/>
+    </g>
+
+    <g id="ice-tile">
+      <rect width="17" height="17" class="ink"/>
+      <rect x="1" y="1" width="15" height="15" class="cyan"/>
+      <path class="ice" d="M1 1H16V3H3V16H1Z M3 12H6V9H9V6H12V3H15V6H12V9H9V12H6V15H3Z"/>
+      <path class="blue" d="M15 4H16V16H4V15H15Z"/>
+    </g>
+
+    <path id="force-chevron" d="M0 0H4V2H6V4H8V6H6V8H4V10H0V8H2V6H4V4H2V2H0Z"/>
+
+    <g id="wall-tile">
+      <rect width="25" height="11" class="ink"/>
+      <rect x="1" y="1" width="23" height="9" class="metal"/>
+      <path class="metal-light" d="M1 1H24V2H2V10H1Z"/>
+      <path class="metal-dark" d="M23 2H24V10H2V9H23Z"/>
+    </g>
+
+    <g id="ice-block">
+      <path class="ink" d="M3 0H29V2H32V30H30V33H1V30H0V3H3Z"/>
+      <path class="blue" d="M27 4H31V29H29V32H25V8H27Z"/>
+      <path class="cyan" d="M3 6H26V31H2V9H1V7H3Z"/>
+      <path class="ice" d="M3 1H28V3H30V5H27V7H4V9H1V4H3Z"/>
+      <path class="ice" d="M4 20H7V17H10V14H13V11H16V9H19V12H16V15H13V18H10V21H7V24H4Z M12 28H15V25H18V22H21V19H24V16H26V20H23V23H20V26H17V29H12Z"/>
+      <path class="cyan" d="M27 9H29V28H27Z"/>
+    </g>
+  </defs>
+
+  <rect width="320" height="120" class="navy"/>
+
+  <g id="circuit-frame">
+    <use xlink:href="#corner-circuit"/>
+    <use xlink:href="#corner-circuit" transform="translate(320 0) scale(-1 1)"/>
+    <path class="circuit" d="M140 115H156V110H175V104H191 M140 107H149V100H159"/>
+    <path class="teal" d="M155 96H163V104H155Z M187 100H195V108H187Z"/>
+    <path class="navy" d="M157 98H161V102H157Z M189 102H193V106H189Z"/>
+  </g>
+
+  <g id="stone-frame">
+    <use xlink:href="#wall-tile" x="0" y="112"/>
+    <use xlink:href="#wall-tile" x="26" y="112"/>
+    <use xlink:href="#wall-tile" x="52" y="112"/>
+    <use xlink:href="#wall-tile" x="78" y="112"/>
+    <use xlink:href="#wall-tile" x="104" y="112"/>
+    <use xlink:href="#wall-tile" x="208" y="112"/>
+    <use xlink:href="#wall-tile" x="234" y="112"/>
+    <use xlink:href="#wall-tile" x="260" y="112"/>
+    <use xlink:href="#wall-tile" x="286" y="112"/>
+    <use xlink:href="#wall-tile" x="312" y="112"/>
+    <path class="ink" d="M0 62H10V112H0Z M310 62H320V112H310Z"/>
+    <path class="metal" d="M0 63H8V85H0Z M0 88H8V110H0Z M312 63H320V85H312Z M312 88H320V110H312Z"/>
+    <path class="metal-light" d="M0 63H8V65H2V85H0Z M0 88H8V90H2V110H0Z M312 63H320V65H314V85H312Z M312 88H320V90H314V110H312Z"/>
+    <path class="metal-dark" d="M7 65H8V85H2V83H7Z M7 90H8V110H2V108H7Z M319 65H320V85H314V83H319Z M319 90H320V110H314V108H319Z"/>
+  </g>
+
+  <g id="puzzle-inventory">
+    <use xlink:href="#flipper" x="65" y="5"/>
+    <use xlink:href="#flipper" x="78" y="5"/>
+    <use xlink:href="#microchip" x="98" y="5"/>
+    <rect x="106" y="13" width="5" height="5" class="cyan"/>
+    <rect x="106" y="13" width="5" height="1" class="ice"/>
+    <use xlink:href="#sparkle" x="124" y="12"/>
+    <use xlink:href="#key" x="136" y="8" class="gold"/>
+    <use xlink:href="#toggle-block" x="179" y="7"/>
+    <use xlink:href="#sparkle" x="203" y="12"/>
+    <use xlink:href="#ice-tile" x="219" y="7"/>
+    <g transform="translate(247 7)">
+      <rect width="17" height="17" class="ink"/>
+      <rect x="1" y="1" width="15" height="15" class="metal-dark"/>
+      <use xlink:href="#force-chevron" x="5" y="3" class="teal"/>
+    </g>
+  </g>
+
+  <!-- Original banner explorer restored as pixel-aligned vector runs. -->
+  <g id="chip-explorer">
+    <path class="ink" d="M37 33h12v1H37Z M53 33h2v1H53Z M36 34h1v1H36Z M49 34h1v1H49Z M52 34h1v1H52Z M55 34h1v1H55Z M31 35h6v1H31Z M49 35h3v1H49Z M55 35h1v1H55Z M30 36h1v1H30Z M54 36h1v1H54Z M29 37h2v1H29Z M53 37h6v1H53Z M28 38h1v1H28Z M59 38h1v1H59Z M27 39h2v1H27Z M59 39h1v1H59Z M26 40h1v1H26Z M59 40h1v1H59Z M25 41h2v1H25Z M58 41h1v1H58Z M24 42h1v1H24Z M39 42h2v1H39Z M57 42h1v1H57Z M24 43h1v1H24Z M37 43h20v1H37Z M23 44h2v1H23Z M37 44h2v1H37Z M41 44h14v1H41Z M22 45h1v1H22Z M36 45h1v1H36Z M55 45h1v1H55Z M22 46h1v1H22Z M55 46h1v1H55Z M22 47h1v1H22Z M35 47h2v1H35Z M40 47h1v1H40Z M46 47h1v1H46Z M55 47h3v1H55Z M22 48h1v1H22Z M58 48h1v1H58Z M22 49h1v1H22Z M35 49h2v1H35Z M47 49h2v1H47Z M58 49h1v1H58Z M22 50h1v1H22Z M31 50h1v1H31Z M36 50h5v1H36Z M49 50h3v1H49Z M58 50h1v1H58Z M22 51h1v1H22Z M30 51h1v1H30Z M34 51h2v1H34Z M43 51h1v1H43Z M58 51h1v1H58Z M22 52h1v1H22Z M29 52h1v1H29Z M35 52h1v1H35Z M58 52h1v1H58Z M23 53h2v1H23Z M27 53h2v1H27Z M39 53h2v1H39Z M47 53h2v1H47Z M51 53h1v1H51Z M58 53h1v1H58Z M24 54h1v1H24Z M27 54h2v1H27Z M35 54h2v1H35Z M48 54h1v1H48Z M58 54h1v1H58Z M24 55h1v1H24Z M27 55h2v1H27Z M53 55h5v1H53Z M24 56h1v1H24Z M27 56h2v1H27Z M53 56h3v1H53Z M57 56h1v1H57Z M25 57h2v1H25Z M28 57h3v1H28Z M57 57h1v1H57Z M26 58h1v1H26Z M29 58h2v1H29Z M57 58h1v1H57Z M27 59h2v1H27Z M31 59h4v1H31Z M57 59h1v1H57Z M19 60h8v1H19Z M32 60h1v1H32Z M43 60h2v1H43Z M50 60h1v1H50Z M57 60h1v1H57Z M18 61h1v1H18Z M27 61h2v1H27Z M32 61h1v1H32Z M57 61h1v1H57Z M15 62h4v1H15Z M29 62h1v1H29Z M33 62h1v1H33Z M47 62h2v1H47Z M56 62h1v1H56Z M14 63h1v1H14Z M29 63h1v1H29Z M34 63h3v1H34Z M55 63h1v1H55Z M14 64h1v1H14Z M27 64h2v1H27Z M37 64h2v1H37Z M53 64h2v1H53Z M14 65h1v1H14Z M25 65h10v1H25Z M38 65h1v1H38Z M53 65h1v1H53Z M58 65h5v1H58Z M14 66h1v1H14Z M23 66h2v1H23Z M26 66h1v1H26Z M35 66h1v1H35Z M39 66h14v1H39Z M57 66h1v1H57Z M63 66h1v1H63Z M14 67h1v1H14Z M23 67h4v1H23Z M35 67h2v1H35Z M39 67h6v1H39Z M56 67h2v1H56Z M63 67h2v1H63Z M13 68h1v1H13Z M15 68h2v1H15Z M37 68h2v1H37Z M45 68h1v1H45Z M55 68h1v1H55Z M65 68h1v1H65Z M12 69h1v1H12Z M22 69h1v1H22Z M37 69h2v1H37Z M45 69h2v1H45Z M55 69h1v1H55Z M65 69h1v1H65Z M12 70h1v1H12Z M20 70h1v1H20Z M37 70h2v1H37Z M47 70h1v1H47Z M55 70h1v1H55Z M65 70h1v1H65Z M12 71h1v1H12Z M37 71h2v1H37Z M47 71h1v1H47Z M49 71h2v1H49Z M55 71h1v1H55Z M65 71h1v1H65Z M11 72h1v1H11Z M17 72h3v1H17Z M29 72h4v1H29Z M37 72h2v1H37Z M47 72h2v1H47Z M51 72h1v1H51Z M54 72h1v1H54Z M65 72h1v1H65Z M11 73h1v1H11Z M27 73h2v1H27Z M31 73h2v1H31Z M37 73h2v1H37Z M47 73h2v1H47Z M52 73h3v1H52Z M65 73h1v1H65Z M11 74h1v1H11Z M27 74h1v1H27Z M30 74h1v1H30Z M35 74h2v1H35Z M47 74h2v1H47Z M63 74h2v1H63Z M11 75h1v1H11Z M17 75h2v1H17Z M27 75h1v1H27Z M30 75h1v1H30Z M33 75h4v1H33Z M47 75h2v1H47Z M63 75h1v1H63Z M11 76h1v1H11Z M15 76h2v1H15Z M25 76h2v1H25Z M31 76h4v1H31Z M47 76h2v1H47Z M59 76h4v1H59Z M11 77h1v1H11Z M15 77h2v1H15Z M25 77h1v1H25Z M30 77h1v1H30Z M47 77h2v1H47Z M59 77h1v1H59Z M12 78h1v1H12Z M15 78h2v1H15Z M25 78h1v1H25Z M30 78h1v1H30Z M47 78h2v1H47Z M57 78h2v1H57Z M13 79h2v1H13Z M16 79h1v1H16Z M25 79h1v1H25Z M30 79h1v1H30Z M47 79h1v1H47Z M49 79h8v1H49Z M16 80h1v1H16Z M25 80h1v1H25Z M30 80h1v1H30Z M41 80h4v1H41Z M47 80h1v1H47Z M17 81h2v1H17Z M23 81h2v1H23Z M31 81h6v1H31Z M43 81h1v1H43Z M45 81h2v1H45Z M18 82h1v1H18Z M23 82h1v1H23Z M31 82h6v1H31Z M43 82h6v1H43Z M19 83h4v1H19Z M30 83h1v1H30Z M49 83h1v1H49Z M29 84h2v1H29Z M49 84h4v1H49Z M28 85h1v1H28Z M53 85h1v1H53Z M28 86h1v1H28Z M53 86h1v1H53Z M28 87h1v1H28Z M39 87h2v1H39Z M53 87h1v1H53Z M27 88h2v1H27Z M39 88h2v1H39Z M54 88h1v1H54Z M18 89h3v1H18Z M26 89h1v1H26Z M37 89h2v1H37Z M41 89h2v1H41Z M55 89h1v1H55Z M17 90h1v1H17Z M21 90h1v1H21Z M23 90h3v1H23Z M37 90h1v1H37Z M42 90h1v1H42Z M55 90h2v1H55Z M16 91h1v1H16Z M22 91h1v1H22Z M35 91h2v1H35Z M43 91h2v1H43Z M57 91h1v1H57Z M15 92h2v1H15Z M22 92h1v1H22Z M35 92h1v1H35Z M44 92h1v1H44Z M57 92h1v1H57Z M59 92h6v1H59Z M14 93h1v1H14Z M22 93h1v1H22Z M33 93h2v1H33Z M45 93h2v1H45Z M57 93h2v1H57Z M65 93h1v1H65Z M14 94h1v1H14Z M22 94h1v1H22Z M33 94h1v1H33Z M46 94h1v1H46Z M57 94h2v1H57Z M65 94h1v1H65Z M14 95h1v1H14Z M24 95h1v1H24Z M31 95h2v1H31Z M46 95h1v1H46Z M65 95h1v1H65Z M23 96h2v1H23Z M29 96h2v1H29Z M46 96h1v1H46Z M65 96h1v1H65Z M23 97h1v1H23Z M25 97h4v1H25Z M47 97h2v1H47Z M65 97h1v1H65Z M23 98h1v1H23Z M48 98h1v1H48Z M54 98h1v1H54Z M63 98h2v1H63Z M23 99h1v1H23Z M48 99h1v1H48Z M51 99h2v1H51Z M62 99h1v1H62Z M23 100h1v1H23Z M49 100h4v1H49Z M62 100h1v1H62Z M15 101h2v1H15Z M23 101h1v1H23Z M50 101h1v1H50Z M59 101h3v1H59Z M16 102h1v1H16Z M22 102h1v1H22Z M50 102h1v1H50Z M59 102h1v1H59Z M17 103h5v1H17Z M51 103h2v1H51Z M57 103h2v1H57Z M52 104h1v1H52Z M57 104h1v1H57Z M53 105h4v1H53Z"/>
+    <path class="navy" d="M35 45h1v1H35Z M35 46h2v1H35Z M39 47h1v1H39Z M41 47h2v1H41Z M45 47h1v1H45Z M51 47h4v1H51Z M35 48h2v1H35Z M39 48h2v1H39Z M47 48h1v1H47Z M51 48h1v1H51Z M31 49h4v1H31Z M39 49h2v1H39Z M51 49h1v1H51Z M30 50h1v1H30Z M32 50h4v1H32Z M43 50h2v1H43Z M47 50h2v1H47Z M54 50h2v1H54Z M29 51h1v1H29Z M36 51h5v1H36Z M44 51h1v1H44Z M47 51h5v1H47Z M54 51h2v1H54Z M30 52h1v1H30Z M36 52h5v1H36Z M43 52h2v1H43Z M47 52h5v1H47Z M54 52h2v1H54Z M35 53h2v1H35Z M39 54h2v1H39Z M47 54h1v1H47Z M51 54h1v1H51Z M40 55h7v1H40Z M43 59h2v1H43Z M49 60h1v1H49Z M45 61h6v1H45Z M45 62h2v1H45Z M21 68h2v1H21Z M15 69h2v1H15Z M21 69h1v1H21Z M17 70h3v1H17Z M17 71h4v1H17Z M20 72h1v1H20Z M17 73h4v1H17Z M51 73h1v1H51Z M17 74h2v1H17Z M39 81h2v1H39Z M39 82h2v1H39Z M23 95h1v1H23Z M55 95h2v1H55Z M55 96h2v1H55Z M53 97h2v1H53Z M53 98h1v1H53Z"/>
+    <path class="metal-dark" d="M43 47h2v1H43Z M47 47h1v1H47Z M56 56h1v1H56Z M34 60h1v1H34Z"/>
+    <path class="metal" d="M38 45h1v1H38Z M34 52h1v1H34Z M41 56h6v1H41Z M41 69h1v1H41Z M21 75h2v1H21Z M61 75h2v1H61Z"/>
+    <path class="metal-light" d="M53 50h1v1H53Z M53 51h1v1H53Z M53 52h1v1H53Z"/>
+    <path class="cream" d="M42 45h4v1H42Z M48 45h4v1H48Z M53 45h2v1H53Z M29 53h1v1H29Z M44 54h1v1H44Z M29 56h1v1H29Z M50 62h1v1H50Z M17 77h1v1H17Z"/>
+    <path class="brown" d="M37 34h12v1H37Z M53 34h2v1H53Z M37 35h12v1H37Z M52 35h3v1H52Z M31 36h23v1H31Z M31 37h22v1H31Z M29 38h30v1H29Z M29 39h30v1H29Z M27 40h32v1H27Z M27 41h31v1H27Z M25 42h14v1H25Z M41 42h16v1H41Z M25 43h12v1H25Z M25 44h12v1H25Z M23 45h12v1H23Z M23 46h12v1H23Z M23 47h12v1H23Z M23 48h12v1H23Z M23 49h8v1H23Z M23 50h7v1H23Z M23 51h6v1H23Z M33 51h1v1H33Z M23 52h6v1H23Z M25 53h2v1H25Z M25 54h2v1H25Z M25 55h2v1H25Z M25 56h2v1H25Z M27 57h1v1H27Z M27 58h2v1H27Z M33 60h1v1H33Z M45 60h1v1H45Z"/>
+    <path class="skin" d="M39 44h2v1H39Z M37 45h1v1H37Z M39 45h3v1H39Z M46 45h2v1H46Z M52 45h1v1H52Z M37 46h18v1H37Z M37 47h2v1H37Z M48 47h3v1H48Z M37 48h2v1H37Z M48 48h3v1H48Z M37 49h2v1H37Z M49 49h2v1H49Z M31 51h2v1H31Z M31 52h3v1H31Z M30 53h5v1H30Z M37 53h2v1H37Z M49 53h2v1H49Z M29 54h6v1H29Z M37 54h2v1H37Z M49 54h2v1H49Z M29 55h11v1H29Z M47 55h6v1H47Z M30 56h11v1H30Z M47 56h6v1H47Z M31 57h26v1H31Z M31 58h26v1H31Z M35 59h8v1H35Z M45 59h12v1H45Z M35 60h8v1H35Z M46 60h3v1H46Z M51 60h6v1H51Z M33 61h12v1H33Z M51 61h6v1H51Z M34 62h11v1H34Z M49 62h1v1H49Z M51 62h5v1H51Z M37 63h18v1H37Z M39 64h14v1H39Z M39 65h14v1H39Z M58 66h5v1H58Z M58 67h5v1H58Z M41 68h4v1H41Z M56 68h2v1H56Z M59 68h6v1H59Z M42 69h3v1H42Z M56 69h9v1H56Z M56 70h9v1H56Z M56 71h2v1H56Z M59 71h6v1H59Z M57 72h8v1H57Z M57 73h8v1H57Z M19 74h2v1H19Z M58 74h5v1H58Z M19 75h2v1H19Z M59 75h2v1H59Z M17 76h6v1H17Z M18 77h5v1H18Z M17 78h8v1H17Z M17 79h8v1H17Z M17 80h8v1H17Z M19 81h4v1H19Z M19 82h4v1H19Z"/>
+    <path class="teal-dark" d="M19 61h8v1H19Z M19 62h10v1H19Z M16 63h13v1H16Z M15 64h12v1H15Z M15 65h10v1H15Z M15 66h8v1H15Z M15 67h8v1H15Z M14 68h1v1H14Z M17 68h4v1H17Z M13 69h2v1H13Z M19 69h2v1H19Z M14 70h3v1H14Z M13 71h4v1H13Z M12 72h5v1H12Z M12 73h5v1H12Z M12 74h5v1H12Z M12 75h5v1H12Z M31 75h2v1H31Z M12 76h3v1H12Z M12 77h3v1H12Z M31 80h10v1H31Z M46 80h1v1H46Z M37 81h2v1H37Z M37 82h2v1H37Z M42 82h1v1H42Z M52 85h1v1H52Z M18 90h2v1H18Z M26 90h1v1H26Z M17 91h5v1H17Z M17 92h4v1H17Z M15 93h7v1H15Z M60 93h5v1H60Z M15 94h6v1H15Z M59 94h6v1H59Z M15 95h7v1H15Z M57 95h8v1H57Z M15 96h8v1H15Z M57 96h8v1H57Z M15 97h8v1H15Z M55 97h9v1H55Z M15 98h8v1H15Z M55 98h8v1H55Z M15 99h8v1H15Z M50 99h1v1H50Z M53 99h9v1H53Z M15 100h8v1H15Z M53 100h7v1H53Z M61 100h1v1H61Z M17 101h4v1H17Z M22 101h1v1H22Z M51 101h8v1H51Z M17 102h4v1H17Z M51 102h8v1H51Z M53 103h4v1H53Z M53 104h4v1H53Z"/>
+    <path class="teal" d="M27 66h4v1H27Z M32 66h3v1H32Z M27 67h8v1H27Z M23 68h14v1H23Z M39 68h2v1H39Z M23 69h14v1H23Z M39 69h2v1H39Z M21 70h16v1H21Z M39 70h8v1H39Z M21 71h16v1H21Z M39 71h8v1H39Z M21 72h8v1H21Z M33 72h4v1H33Z M39 72h8v1H39Z M49 72h2v1H49Z M55 72h2v1H55Z M21 73h6v1H21Z M33 73h4v1H33Z M39 73h8v1H39Z M49 73h2v1H49Z M55 73h2v1H55Z M21 74h6v1H21Z M31 74h4v1H31Z M37 74h10v1H37Z M49 74h9v1H49Z M23 75h4v1H23Z M37 75h10v1H37Z M49 75h10v1H49Z M23 76h2v1H23Z M35 76h12v1H35Z M49 76h10v1H49Z M23 77h1v1H23Z M31 77h16v1H31Z M49 77h10v1H49Z M31 78h16v1H31Z M49 78h8v1H49Z M31 79h16v1H31Z M31 83h18v1H31Z M31 84h18v1H31Z M29 85h23v1H29Z M29 86h24v1H29Z M29 87h10v1H29Z M41 87h12v1H41Z M29 88h10v1H29Z M41 88h13v1H41Z M27 89h10v1H27Z M43 89h12v1H43Z M27 90h10v1H27Z M43 90h12v1H43Z M23 91h12v1H23Z M45 91h12v1H45Z M23 92h12v1H23Z M45 92h12v1H45Z M23 93h10v1H23Z M47 93h10v1H47Z M23 94h10v1H23Z M47 94h10v1H47Z M25 95h6v1H25Z M47 95h8v1H47Z M25 96h4v1H25Z M47 96h8v1H47Z M49 97h4v1H49Z M49 98h4v1H49Z M49 99h1v1H49Z"/>
+    <path class="mint" d="M24 77h1v1H24Z"/>
+    <path class="blue" d="M15 63h1v1H15Z M31 66h1v1H31Z M17 69h2v1H17Z M13 70h1v1H13Z M13 78h2v1H13Z M45 80h1v1H45Z M41 81h2v1H41Z M41 82h1v1H41Z M20 90h1v1H20Z M21 92h1v1H21Z M59 93h1v1H59Z M21 94h1v1H21Z M22 95h1v1H22Z M64 97h1v1H64Z M60 100h1v1H60Z M21 101h1v1H21Z M21 102h1v1H21Z"/>
+    <path class="ice" d="M41 48h6v1H41Z M52 48h6v1H52Z M41 49h6v1H41Z M52 49h6v1H52Z M41 50h2v1H41Z M45 50h2v1H45Z M52 50h1v1H52Z M56 50h2v1H56Z M41 51h2v1H41Z M45 51h2v1H45Z M52 51h1v1H52Z M56 51h2v1H56Z M41 52h2v1H41Z M45 52h2v1H45Z M52 52h1v1H52Z M56 52h2v1H56Z M41 53h6v1H41Z M52 53h6v1H52Z M41 54h3v1H41Z M45 54h2v1H45Z M52 54h6v1H52Z"/>
+    <path class="red" d="M58 68h1v1H58Z M58 71h1v1H58Z"/>
+  </g>
+
+  <g id="title-shadow" class="ink" transform="translate(2 3)">
+    <g id="pocket-shadow" transform="translate(99 28) scale(4)" class="ink">
+      <use xlink:href="#letter-p" x="0"/>
+      <use xlink:href="#letter-o" x="6"/>
+      <use xlink:href="#letter-c" x="12"/>
+      <use xlink:href="#letter-k" x="18"/>
+      <use xlink:href="#letter-e" x="24"/>
+      <use xlink:href="#letter-t" x="30"/>
+    </g>
+    <g id="wonders-shadow" transform="translate(83 62) scale(4)" class="ink">
+      <use xlink:href="#letter-w" x="0"/>
+      <use xlink:href="#letter-o" x="8"/>
+      <use xlink:href="#letter-n" x="14"/>
+      <use xlink:href="#letter-d" x="20"/>
+      <use xlink:href="#letter-e" x="26"/>
+      <use xlink:href="#letter-r" x="32"/>
+      <use xlink:href="#letter-s" x="38"/>
+    </g>
+  </g>
+  <g id="title-letters">
+    <g id="pocket" transform="translate(99 28) scale(4)" class="cream">
+      <use xlink:href="#letter-p" x="0"/>
+      <use xlink:href="#letter-o" x="6"/>
+      <use xlink:href="#letter-c" x="12"/>
+      <use xlink:href="#letter-k" x="18"/>
+      <use xlink:href="#letter-e" x="24"/>
+      <use xlink:href="#letter-t" x="30"/>
+    </g>
+    <g id="wonders" transform="translate(83 62) scale(4)" class="gold">
+      <use xlink:href="#letter-w" x="0"/>
+      <use xlink:href="#letter-o" x="8"/>
+      <use xlink:href="#letter-n" x="14"/>
+      <use xlink:href="#letter-d" x="20"/>
+      <use xlink:href="#letter-e" x="26"/>
+      <use xlink:href="#letter-r" x="32"/>
+      <use xlink:href="#letter-s" x="38"/>
+    </g>
+  </g>
+
+  <g id="right-hand-key">
+    <use xlink:href="#key" x="280" y="44" class="red"/>
+    <use xlink:href="#sparkle" x="276" y="35"/>
+    <use xlink:href="#sparkle" x="304" y="33"/>
+    <path class="cream" d="M291 33H293V37H291Z M316 48H320V50H316Z M293 62H295V66H293Z M273 56H277V58H273Z"/>
+  </g>
+
+  <g id="lower-puzzle-objects">
+    <use xlink:href="#microchip" x="83" y="94"/>
+    <use xlink:href="#microchip" x="109" y="94"/>
+    <rect x="214" y="99" width="62" height="15" class="ink"/>
+    <rect x="220" y="102" width="55" height="10" class="navy"/>
+    <use xlink:href="#force-chevron" x="225" y="102" class="teal"/>
+    <use xlink:href="#force-chevron" x="242" y="102" class="teal"/>
+    <use xlink:href="#force-chevron" x="259" y="102" class="teal"/>
+    <path class="metal" d="M214 99H220V114H214Z M273 99H278V114H273Z"/>
+    <path class="metal-light" d="M214 99H220V101H216V114H214Z M273 99H278V101H275V114H273Z"/>
+    <use xlink:href="#ice-block" x="279" y="79"/>
+  </g>
+</svg>

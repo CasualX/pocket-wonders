@@ -1,0 +1,187 @@
+{
+  "name": "The Tempering House",
+  "author": "Codex",
+  "hint": "A little cold. A little courage.\nLeave something on the scales.",
+  "required_chips": 0,
+  "map": {
+    "width": 12,
+    "height": 9,
+    "data": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      2,
+      2,
+      3,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      2,
+      0,
+      4,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      2,
+      2,
+      8,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      2,
+      2,
+      5,
+      2,
+      2,
+      2,
+      2,
+      6,
+      7,
+      0,
+      0,
+      2,
+      0,
+      2,
+      0,
+      2,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      2,
+      2,
+      0,
+      2,
+      2,
+      2,
+      0,
+      1,
+      1,
+      1,
+      0,
+      2,
+      2,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "legend": [
+      "Wall",
+      "Blank",
+      "Floor",
+      "BrownButton",
+      "Hint",
+      "Fire",
+      "BearTrap",
+      "Exit",
+      "Gravel"
+    ]
+  },
+  "entities": [
+    {
+      "kind": "Player",
+      "pos": [
+        3,
+        3
+      ]
+    },
+    {
+      "kind": "Block",
+      "pos": [
+        2,
+        6
+      ]
+    },
+    {
+      "kind": "Block",
+      "pos": [
+        5,
+        5
+      ]
+    },
+    {
+      "kind": "Block",
+      "pos": [
+        2,
+        4
+      ]
+    },
+    {
+      "kind": "IceBlock",
+      "pos": [
+        3,
+        6
+      ]
+    },
+    {
+      "kind": "Bomb",
+      "pos": [
+        8,
+        4
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "src": [
+        3,
+        1
+      ],
+      "dest": [
+        9,
+        4
+      ]
+    }
+  ]
+}

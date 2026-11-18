@@ -1,0 +1,200 @@
+{
+  "name": "The Neighbourhood Watch",
+  "author": "Codex",
+  "hint": "Borrow a neighbour.\nMind the double lockout.",
+  "required_chips": 0,
+  "map": {
+    "width": 12,
+    "height": 9,
+    "data": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      2,
+      2,
+      3,
+      4,
+      4,
+      4,
+      4,
+      4,
+      5,
+      0,
+      0,
+      0,
+      0,
+      0,
+      6,
+      5,
+      6,
+      7,
+      5,
+      5,
+      8,
+      0,
+      0,
+      0,
+      0,
+      0,
+      6,
+      4,
+      8,
+      9,
+      10,
+      5,
+      8,
+      0,
+      0,
+      0,
+      0,
+      0,
+      6,
+      7,
+      5,
+      11,
+      5,
+      5,
+      8,
+      0,
+      0,
+      0,
+      0,
+      0,
+      6,
+      2,
+      8,
+      9,
+      9,
+      5,
+      8,
+      0,
+      0,
+      0,
+      0,
+      0,
+      6,
+      2,
+      12,
+      6,
+      5,
+      12,
+      8,
+      0,
+      0,
+      0,
+      0,
+      0,
+      5,
+      9,
+      9,
+      9,
+      9,
+      9,
+      5,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "legend": [
+      "Wall",
+      "Exit",
+      "BearTrap",
+      "Hint",
+      "ThinWallS",
+      "Floor",
+      "ThinWallE",
+      "BrownButton",
+      "ThinWallW",
+      "ThinWallN",
+      "ThinWallNE",
+      "ThinWallSE",
+      "ThinWallNW"
+    ]
+  },
+  "entities": [
+    {
+      "kind": "Player",
+      "pos": [
+        4,
+        3
+      ]
+    },
+    {
+      "kind": "Teeth",
+      "pos": [
+        5,
+        6
+      ]
+    },
+    {
+      "kind": "Teeth",
+      "pos": [
+        6,
+        2
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "src": [
+        7,
+        2
+      ],
+      "dest": [
+        5,
+        6
+      ]
+    },
+    {
+      "src": [
+        7,
+        2
+      ],
+      "dest": [
+        3,
+        1
+      ]
+    },
+    {
+      "src": [
+        5,
+        4
+      ],
+      "dest": [
+        5,
+        5
+      ]
+    },
+    {
+      "src": [
+        5,
+        4
+      ],
+      "dest": [
+        2,
+        1
+      ]
+    }
+  ]
+}
