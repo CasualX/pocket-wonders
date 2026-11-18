@@ -126,6 +126,37 @@ def page(items):
 '''
 
 
+def build_pack(packer, manifest):
+    """Reuse the archive when its inputs match: paks creation includes fresh metadata."""
+    fingerprint = hashlib.sha256()
+    paths = ["index.json", *manifest["levels"]]
+    if manifest.get("splash"):
+        paths.append(manifest["splash"])
+    for relative in paths:
+        fingerprint.update(relative.encode() + b"\0" + (ROOT / relative).read_bytes() + b"\0")
+    source_hash = fingerprint.hexdigest()
+    archive = DOCS / "pocket-wonders.paks"
+    metadata = DOCS / "assets" / "pack.json"
+    try:
+        previous = json.loads(metadata.read_text())
+        if (previous["source_sha256"] == source_hash
+                and previous["archive_sha256"] == hashlib.sha256(archive.read_bytes()).hexdigest()):
+            return "Levelset archive unchanged; reused the verified public download.\n"
+    except (OSError, ValueError, KeyError):
+        pass
+    # packset follows only index.json's level references and splash asset.
+    with tempfile.TemporaryDirectory(prefix="pack-", dir=ROOT / "tmp" / "site-build") as staging:
+        packed = Path(staging) / "pocket-wonders.paks"
+        result = subprocess.run([str(packer), str(ROOT), str(packed)],
+                                capture_output=True, text=True, check=True)
+        assert packed.stat().st_size > 0
+        packed.replace(archive)
+    metadata.write_text(json.dumps({"source_sha256": source_hash,
+                                   "archive_sha256": hashlib.sha256(archive.read_bytes()).hexdigest()},
+                                  indent=2) + "\n")
+    return result.stdout + result.stderr
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--chipdx", type=Path, help="ChipDX checkout containing the compiled tools")
@@ -149,15 +180,9 @@ def main():
     (DOCS / "index.html").write_text(page(items))
     (DOCS / ".nojekyll").touch()
     shutil.copyfile(ROOT / "banner.png", DOCS / "assets" / "banner.png")
-    # packset follows only index.json's level references and splash asset.
-    with tempfile.TemporaryDirectory(prefix="pack-", dir=ROOT / "tmp" / "site-build") as staging:
-        packed = Path(staging) / "pocket-wonders.paks"
-        result = subprocess.run([str(packer), str(ROOT), str(packed)],
-                                capture_output=True, text=True, check=True)
-        assert packed.stat().st_size > 0
-        packed.replace(DOCS / "pocket-wonders.paks")
+    pack_log = build_pack(packer, manifest)
     (ROOT / "tmp" / "site-build" / "manifest.json").write_text(json.dumps(items, indent=2) + "\n")
-    (ROOT / "tmp" / "site-build" / "pack.log").write_text(result.stdout + result.stderr)
+    (ROOT / "tmp" / "site-build" / "pack.log").write_text(pack_log)
     print(f"Built {len(items)} normal screenshots and replay-free ChipDX links in {DOCS}")
 
 
