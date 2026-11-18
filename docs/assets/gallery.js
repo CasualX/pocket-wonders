@@ -17,7 +17,7 @@ function filterLevels() {
   }
   clear.hidden = !input.value;
   empty.hidden = visible !== 0;
-  count.textContent = terms.length ? `${visible} of ${levels.length} levels` : `All ${levels.length} levels`;
+  count.textContent = terms.length ? `${visible} of ${levels.length} levels` : "";
 }
 
 form.hidden = false;

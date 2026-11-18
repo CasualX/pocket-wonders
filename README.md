@@ -6,7 +6,7 @@ The website lives in [`docs/`](docs/). Each screenshot opens that level in the h
 
 ## Play
 
-The GitHub Pages address, once enabled, is **https://casualx.github.io/PocketWonders/**.
+The website is **https://casualx.github.io/pocket-wonders/**.
 
 In this repository's **Settings → Pages**, choose **Deploy from a branch**, branch **master**, folder **/docs**. The site is plain HTML, CSS and JavaScript; no Pages build workflow or package installation is needed.
 

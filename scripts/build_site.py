@@ -47,8 +47,25 @@ def render(number, relative, preview, encoder):
         raise ValueError(f"{relative}: keep author replays in ChipDX's regression fixtures, not public levels.")
     target = DOCS / "screenshots" / f"level{number:02}.png"
     # Deliberately no --reveal or --replay: these are the normal initial boards.
-    result = subprocess.run([str(preview), "--json", str(source), "-o", str(target)],
-                            cwd=preview.parents[2], capture_output=True, text=True)
+    with tempfile.TemporaryDirectory(prefix="preview-", dir=ROOT / "tmp" / "site-build") as staging:
+        preview_source = source
+        if number == 8:
+            # This mirror puzzle's second room must remain unseen in its public preview.
+            cropped = json.loads(source.read_text())
+            old_width = cropped["map"]["width"]
+            width = min(26, old_width)
+            rows = cropped["map"]["data"]
+            cropped["map"]["data"] = [cell for y in range(cropped["map"]["height"])
+                                        for cell in rows[y * old_width:y * old_width + width]]
+            cropped["map"]["width"] = width
+            cropped["entities"] = [e for e in cropped["entities"] if e["pos"][0] < width]
+            if "connections" in cropped:
+                cropped["connections"] = [c for c in cropped["connections"]
+                                           if c["src"][0] < width and c["dest"][0] < width]
+            preview_source = Path(staging) / "left-room.json"
+            preview_source.write_text(json.dumps(cropped))
+        result = subprocess.run([str(preview), "--json", str(preview_source), "-o", str(target)],
+                                cwd=preview.parents[2], capture_output=True, text=True)
     if result.returncode:
         raise RuntimeError(f"Rendering {relative} failed:\n{result.stderr}")
     link = subprocess.check_output([str(encoder), "--json", str(source)],
@@ -94,10 +111,10 @@ def page(items):
   <meta name="description" content="{count} untimed puzzles for ChipDX. Explore Pocket Wonders and play any level in your browser.">
   <meta property="og:title" content="Pocket Wonders">
   <meta property="og:description" content="{count} puzzles. Every level unlocked. Play in ChipDX.">
-  <meta property="og:image" content="https://casualx.github.io/PocketWonders/assets/banner.png">
+  <meta property="og:image" content="https://casualx.github.io/pocket-wonders/assets/banner.png">
   <meta property="og:type" content="website">
   <title>Pocket Wonders — {count} puzzles for ChipDX</title>
-  <link rel="canonical" href="https://casualx.github.io/PocketWonders/">
+  <link rel="canonical" href="https://casualx.github.io/pocket-wonders/">
   <link rel="stylesheet" href="assets/style.css">
   <script src="assets/gallery.js" defer></script>
 </head>
@@ -105,21 +122,20 @@ def page(items):
   <a class="skip" href="#levels">Skip to levels</a>
   <div class="page">
     <header class="hero">
-      <div class="masthead"><span><i class="pixel" aria-hidden="true"></i> A CHIPDX LEVEL COLLECTION</span><a href="https://github.com/CasualX/PocketWonders">GitHub ↗</a></div>
+      <div class="masthead"><span><i class="pixel" aria-hidden="true"></i> A CHIPDX LEVEL COLLECTION</span><a href="https://github.com/CasualX/pocket-wonders">GitHub ↗</a></div>
       <h1 class="sr-only">Pocket Wonders</h1>
       <img class="banner" src="assets/banner.png" width="960" height="360" alt="Pocket Wonders, a pixel-art world of chips, keys and puzzles" fetchpriority="high">
-      <div class="intro"><p>{count} untimed puzzles for ChipDX.</p><p>Every level is unlocked. Pick one and jump in.</p></div>
       <div class="hero-actions"><a class="button primary" href="#levels">Choose a level <span aria-hidden="true">↓</span></a><a class="button" href="pocket-wonders.paks" download>Download pack</a></div>
     </header>
     <main id="levels">
-      <div class="gallery-heading"><div><p class="eyebrow">CHOOSE YOUR NEXT PUZZLE</p><h2>The collection <span>{count:02}</span></h2></div>
+      <div class="gallery-heading"><h2>Levels</h2>
         <form class="search" role="search" hidden><label for="level-search">Find a level</label><div class="search-box"><input id="level-search" type="search" placeholder="Number or name" autocomplete="off"><button type="button" id="clear-search" hidden>Clear</button></div></form>
       </div>
-      <p id="result-count" class="result-count" aria-live="polite">All {count} levels</p>
+      <p id="result-count" class="sr-only" aria-live="polite"></p>
       <div class="levels">{cards}</div>
       <p class="empty" id="empty-state" hidden>No matching levels. Try another number or name.</p>
     </main>
-    <footer><p>Made for <a href="{items[0]['link']}" target="_blank" rel="noopener">ChipDX</a>. Play links open in a new tab.</p><a href="https://github.com/CasualX/PocketWonders">Source &amp; credits ↗</a></footer>
+    <footer><p>Made for <a href="{items[0]['link']}" target="_blank" rel="noopener">ChipDX</a>. Play links open in a new tab.</p><a href="https://github.com/CasualX/pocket-wonders">Source &amp; credits ↗</a></footer>
   </div>
 </body>
 </html>
