@@ -17,10 +17,11 @@ You can also download `docs/pocket-wonders.paks` and open it in ChipDX.
 - `index.json`, `lv/`, `banner.png`: the playable levelset.
 - `docs/`: the public website, normal initial-board screenshots and downloadable pack.
 - `scripts/build_site.py`: regenerate the public site with ChipDX's tools.
+- `replays/`: author solution recordings, checked manually with ChipDX's `replaycheck` tool.
 - `art/banner.svg`: editable banner source.
 - `tmp/`: ignored local authoring work, review galleries, solution GIFs and migration backups.
 
-Public levels, Play links and the downloadable pack omit embedded author replays. Regression replay fixtures remain in the ChipDX repository under `code/chipcore/tests/replays/pocket-wonders/`.
+Public levels, Play links and the downloadable pack omit embedded author replays. Solution recordings live separately in `replays/` and are not included in the website or pack.
 
 ## Rebuild the website
 
@@ -59,10 +60,12 @@ Pocket Wonders is used at `levelsets/pocket-wonders` in [CasualX/chipdx](https:/
 
 ```sh
 git submodule update --init levelsets/pocket-wonders
-cargo test -p chipcore --test pocket_wonders
+cargo run -p replaycheck -- levelsets/pocket-wonders levelsets/pocket-wonders/replays
 ```
 
-Commit level and site updates here first, then update the submodule revision in ChipDX. Keep solution recordings in ChipDX's regression fixtures or ignored `tmp/`; GIFs are ignored throughout this repository.
+This manually runs each recording against the level with the same `level_name`, regardless of its filename. Missing names or levels produce warnings and are skipped; matched replays must reach `GameOver(LevelComplete)`. Failed replays or loading errors produce a nonzero exit status. Duplicate level names are rejected as ambiguous. Pocket Wonders is not checked by `cargo test`.
+
+Commit level, replay and site updates here first, then update the submodule revision in ChipDX. Keep solution GIFs in ignored `tmp/`; GIFs are ignored throughout this repository.
 
 ## Credits
 

@@ -1,12 +1,181 @@
 {
   "name": "Counterpoint",
   "author": "Codex",
-  "hint": "Two parts. One melody.\nMind the rests.",
+  "hint": "Both Chips move to the same beat.\nPark one on gravel. Let the ball pass.",
   "required_chips": 0,
   "map": {
-    "width": 10,
-    "height": 9,
+    "width": 15,
+    "height": 15,
     "data": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      2,
+      0,
+      2,
+      2,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      3,
+      4,
+      2,
+      1,
+      1,
+      1,
+      1,
+      2,
+      6,
+      0,
+      0,
+      0,
+      0,
+      0,
+      5,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      10,
+      11,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      10,
+      0,
+      12,
+      10,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      2,
+      0,
+      1,
+      0,
+      0,
+      9,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      7,
+      2,
+      1,
+      4,
+      8,
+      1,
+      2,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      2,
+      0,
+      1,
+      2,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
@@ -15,38 +184,6 @@
       1,
       0,
       2,
-      2,
-      2,
-      0,
-      3,
-      5,
-      3,
-      0,
-      4,
-      0,
-      2,
-      2,
-      2,
-      0,
-      0,
-      9,
-      3,
-      6,
-      7,
-      0,
-      0,
-      2,
-      2,
-      0,
-      3,
-      3,
-      3,
-      0,
-      8,
-      3,
-      0,
-      2,
-      2,
       0,
       0,
       0,
@@ -55,37 +192,35 @@
       0,
       0,
       0,
-      2,
-      2,
-      0,
-      9,
-      9,
-      0,
-      0,
-      9,
-      0,
-      2,
-      2,
-      2,
-      0,
-      9,
-      9,
-      10,
-      7,
-      9,
       0,
       0,
       0,
       0,
       0,
-      9,
-      9,
       0,
       0,
-      9,
-      9,
-      11,
-      9,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
@@ -100,163 +235,99 @@
     ],
     "legend": [
       "Wall",
-      "Exit",
-      "Blank",
       "Floor",
-      "YellowLock",
-      "Hint",
-      "BlueLock",
-      "ToggleFloor",
-      "GreenButton",
       "Gravel",
+      "Ice",
+      "Water",
+      "Hint",
       "RedLock",
-      "ToggleWall"
+      "BlueLock",
+      "ForceE",
+      "Exit",
+      "ThinWallN",
+      "ThinWallS",
+      "IceSW"
     ]
   },
   "entities": [
     {
       "kind": "Player",
       "pos": [
-        2,
-        2
+        3,
+        4
       ]
     },
     {
       "kind": "Player",
       "pos": [
-        2,
-        6
+        3,
+        9
       ]
     },
     {
       "kind": "PlayerNPC",
+      "pos": [
+        7,
+        7
+      ]
+    },
+    {
+      "kind": "Block",
       "pos": [
         4,
         4
       ]
     },
     {
-      "kind": "RedKey",
+      "kind": "Block",
       "pos": [
-        1,
-        1
+        6,
+        9
       ]
     },
     {
       "kind": "BlueKey",
       "pos": [
-        5,
-        5
+        3,
+        3
       ]
     },
     {
-      "kind": "YellowKey",
+      "kind": "RedKey",
       "pos": [
-        8,
-        7
+        11,
+        11
       ]
+    },
+    {
+      "kind": "PinkBall",
+      "pos": [
+        9,
+        4
+      ],
+      "face_dir": "Left"
+    },
+    {
+      "kind": "PinkBall",
+      "pos": [
+        9,
+        11
+      ],
+      "face_dir": "Up"
+    },
+    {
+      "kind": "PinkBall",
+      "pos": [
+        12,
+        6
+      ],
+      "face_dir": "Left"
     }
   ],
   "camera_triggers": [
     {
       "player_pos": [
-        1,
-        1
-      ],
-      "entity_index": 0,
-      "entity_kind": "PlayerNPC"
-    },
-    {
-      "player_pos": [
-        1,
-        3
-      ],
-      "entity_index": 0,
-      "entity_kind": "PlayerNPC"
-    },
-    {
-      "player_pos": [
-        2,
-        1
-      ],
-      "entity_index": 0,
-      "entity_kind": "PlayerNPC"
-    },
-    {
-      "player_pos": [
-        2,
-        2
-      ],
-      "entity_index": 0,
-      "entity_kind": "PlayerNPC"
-    },
-    {
-      "player_pos": [
-        2,
-        3
-      ],
-      "entity_index": 0,
-      "entity_kind": "PlayerNPC"
-    },
-    {
-      "player_pos": [
         3,
-        1
-      ],
-      "entity_index": 0,
-      "entity_kind": "PlayerNPC"
-    },
-    {
-      "player_pos": [
-        3,
-        2
-      ],
-      "entity_index": 0,
-      "entity_kind": "PlayerNPC"
-    },
-    {
-      "player_pos": [
-        3,
-        3
-      ],
-      "entity_index": 0,
-      "entity_kind": "PlayerNPC"
-    },
-    {
-      "player_pos": [
-        4,
-        2
-      ],
-      "entity_index": 0,
-      "entity_kind": "PlayerNPC"
-    },
-    {
-      "player_pos": [
-        5,
-        0
-      ],
-      "entity_index": 0,
-      "entity_kind": "PlayerNPC"
-    },
-    {
-      "player_pos": [
-        5,
-        1
-      ],
-      "entity_index": 0,
-      "entity_kind": "PlayerNPC"
-    },
-    {
-      "player_pos": [
-        5,
-        2
-      ],
-      "entity_index": 0,
-      "entity_kind": "PlayerNPC"
-    },
-    {
-      "player_pos": [
-        5,
         3
       ],
       "entity_index": 0,
@@ -266,6 +337,118 @@
       "player_pos": [
         6,
         3
+      ],
+      "entity_index": 0,
+      "entity_kind": "PlayerNPC"
+    },
+    {
+      "player_pos": [
+        8,
+        3
+      ],
+      "entity_index": 0,
+      "entity_kind": "PlayerNPC"
+    },
+    {
+      "player_pos": [
+        9,
+        3
+      ],
+      "entity_index": 0,
+      "entity_kind": "PlayerNPC"
+    },
+    {
+      "player_pos": [
+        10,
+        3
+      ],
+      "entity_index": 0,
+      "entity_kind": "PlayerNPC"
+    },
+    {
+      "player_pos": [
+        3,
+        4
+      ],
+      "entity_index": 0,
+      "entity_kind": "PlayerNPC"
+    },
+    {
+      "player_pos": [
+        4,
+        4
+      ],
+      "entity_index": 0,
+      "entity_kind": "PlayerNPC"
+    },
+    {
+      "player_pos": [
+        5,
+        4
+      ],
+      "entity_index": 0,
+      "entity_kind": "PlayerNPC"
+    },
+    {
+      "player_pos": [
+        6,
+        4
+      ],
+      "entity_index": 0,
+      "entity_kind": "PlayerNPC"
+    },
+    {
+      "player_pos": [
+        7,
+        4
+      ],
+      "entity_index": 0,
+      "entity_kind": "PlayerNPC"
+    },
+    {
+      "player_pos": [
+        8,
+        4
+      ],
+      "entity_index": 0,
+      "entity_kind": "PlayerNPC"
+    },
+    {
+      "player_pos": [
+        9,
+        4
+      ],
+      "entity_index": 0,
+      "entity_kind": "PlayerNPC"
+    },
+    {
+      "player_pos": [
+        10,
+        4
+      ],
+      "entity_index": 0,
+      "entity_kind": "PlayerNPC"
+    },
+    {
+      "player_pos": [
+        11,
+        4
+      ],
+      "entity_index": 0,
+      "entity_kind": "PlayerNPC"
+    },
+    {
+      "player_pos": [
+        3,
+        5
+      ],
+      "entity_index": 0,
+      "entity_kind": "PlayerNPC"
+    },
+    {
+      "player_pos": [
+        10,
+        5
       ],
       "entity_index": 0,
       "entity_kind": "PlayerNPC"
